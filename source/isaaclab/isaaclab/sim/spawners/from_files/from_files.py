@@ -310,6 +310,11 @@ def _spawn_from_usd_file(
         else:
             raise FileNotFoundError(f"USD file not found at path at: '{usd_path}'.")
 
+    print(f"{usd_path=}")
+
+    stage = Usd.Stage.Open(usd_path)
+    stage.Export("/home/gregor/model.usda")
+
     # spawn asset if it doesn't exist.
     if not prim_utils.is_prim_path_valid(prim_path):
         # add prim as reference to stage
