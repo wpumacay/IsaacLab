@@ -70,8 +70,6 @@ tests/
 # Docker history
 .isaac-lab-docker-history
 
-/assets
-/typings
-MUJOCO_LOG.TXT
-
-
+# TacSL sensor
+**/tactile_record/*
+**/gelsight_r15_data/*
